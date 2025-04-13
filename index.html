@@ -7,42 +7,73 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f172a;
-      color: #f1f5f9;
+      color: #f8fafc;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 2rem;
+      scroll-behavior: smooth;
     }
     header {
       text-align: center;
+      margin-bottom: 2rem;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-bottom: 0.25rem;
+      color: #38bdf8;
     }
     p.subtitle {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #94a3b8;
     }
     section {
       max-width: 800px;
       margin-top: 2rem;
+      width: 100%;
     }
-    .project {
+    .project, .skill {
       background: #1e293b;
       border-radius: 1rem;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
-    .project h3 {
+    .project:hover, .skill:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
+    .project h3, .skill h3 {
       margin-top: 0;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill {
+      flex: 1 1 calc(33% - 1rem);
+      text-align: center;
     }
     footer {
       margin-top: 2rem;
       font-size: 0.9rem;
       color: #64748b;
+    }
+    a.button {
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    a.button:hover {
+      background: #0ea5e9;
     }
   </style>
 </head>
@@ -50,6 +81,7 @@
   <header>
     <h1>Olexi Dev</h1>
     <p class="subtitle">Front-End Developer | HTML, CSS, JavaScript</p>
+    <a href="#contact" class="button">Hire Me</a>
   </header>
 
   <section>
@@ -57,6 +89,22 @@
     <p>
       I'm a creative and detail-oriented front-end developer with a passion for clean design and responsive layouts. I specialize in turning ideas into real, functional websites.
     </p>
+
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <h3>HTML5</h3>
+        <p>Semantic markup & accessibility</p>
+      </div>
+      <div class="skill">
+        <h3>CSS3</h3>
+        <p>Responsive layouts, animations</p>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <p>Dynamic behavior, DOM manipulation</p>
+      </div>
+    </div>
 
     <h2>Projects</h2>
     <div class="project">
@@ -69,8 +117,8 @@
     </div>
   </section>
 
-  <footer>
-    <p>Contact me at: olexidev@example.com</p>
+  <footer id="contact">
+    <p>Contact me at: alexlemberg2020@gmail.com</p>
   </footer>
 </body>
 </html>
